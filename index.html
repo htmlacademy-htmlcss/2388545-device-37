@@ -11,22 +11,24 @@
         <a class="page-logo" href="#">
           <img class="page-header-logo" src="images/logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
         </a>
-        <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="visually-hidden" for="navigation-search">Поиск</label>
-          <input class="field navigation-search-field navigation-search-field-main" type="search" name="navigation-search" id="navigation-search" placeholder="Поиск по сайту">
-          <button class="button" type="submit">Найти</button>
-        </form>
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Войти</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Корзина</a>
-          </li>
-        </ul>
+        <div class="navigation-menu-container">
+          <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="visually-hidden" for="navigation-search">Поиск</label>
+            <input class="field navigation-search-field navigation-search-field-main" type="search" name="navigation-search" id="navigation-search" placeholder="Поиск по сайту">
+            <button class="button-search" type="submit">Найти</button>
+          </form>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Войти</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Сравнить</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
         <ul class="navigation-catalog">
           <li class="navigation-catalog-item">
             <a class="navigation-catalog-link" href="#">Каталог товаров</a>
@@ -83,66 +85,72 @@
           <ul class="slider-list">
             <li class="slider-item">
               <img class="slider-image" src="images/slider/slider-1.png" alt="Фото товара." width="560" height="560">
-              <p class="popular-goods-slogan">
-                Порхает как бабочка, жалит как пчела!
-              </p>
-              <p class="popular-goods-description">
-                Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-              </p>
-              <a class="button" href="#">Подробнее</a>
-              <table class="popular-goods-features">
-                <caption class="visually-hidden">Основные характеристики</caption>
-                <tr class="table-data">
-                  <td>800 м</td>
-                  <td>50 м</td>
-                </tr>
-                <tr class="table-description">
-                  <td>Дальность полета</td>
-                  <td>Радиус поражения</td>
-                </tr>
-              </table>
+              <div class="slider-content">
+                <p class="popular-goods-slogan">
+                  Порхает как бабочка, жалит как пчела!
+                </p>
+                <p class="popular-goods-description">
+                  Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+                </p>
+                <a class="button" href="#">Подробнее</a>
+                <table class="popular-goods-features">
+                  <caption class="visually-hidden">Основные характеристики</caption>
+                  <tr class="table-data">
+                    <td>800 м</td>
+                    <td>50 м</td>
+                  </tr>
+                  <tr class="table-description">
+                    <td>Дальность полета</td>
+                    <td>Радиус поражения</td>
+                  </tr>
+                </table>
+              </div>
             </li>
             <li class="slider-item">
               <img class="slider-image" src="images/slider/slider-2.png" alt="Фото товара." width="560" height="560">
-              <p class="popular-goods-slogan">
-                Худеем правильно!
-              </p>
-              <p class="popular-goods-description">
-                Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
-              </p>
-              <a class="button" href="#">Подробнее</a>
-              <table class="popular-goods-features">
-                <caption class="visually-hidden">Основные характеристики</caption>
-                <tr>
-                  <td class="table-data">48 часов</td>
-                </tr>
-                <tr>
-                  <td class="table-description">Без подзарядки</td>
-                </tr>
-              </table>
+              <div class="slider-content">
+                <p class="popular-goods-slogan">
+                  Худеем правильно!
+                </p>
+                <p class="popular-goods-description">
+                  Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+                </p>
+                <a class="button" href="#">Подробнее</a>
+                <table class="popular-goods-features">
+                  <caption class="visually-hidden">Основные характеристики</caption>
+                  <tr>
+                    <td class="table-data">48 часов</td>
+                  </tr>
+                  <tr>
+                    <td class="table-description">Без подзарядки</td>
+                  </tr>
+                </table>
+              </div>
             </li>
             <li class="slider-item">
               <img class="slider-image" src="images/slider/slider-3.png" alt="Фото товара." width="560" height="560">
-              <p class="popular-goods-slogan">
-                Делай селфи, как Бен Стиллер!
-              </p>
-              <p class="popular-goods-description">
-                Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
-              </p>
-              <a class="button" href="#">Подробнее</a>
-              <table class="popular-goods-features">
-                <caption class="visually-hidden">Основные характеристики</caption>
-                <tr class="table-data">
-                  <td>8,5 м</td>
-                  <td>5 кг</td>
-                  <td>Карбон</td>
-                </tr>
-                <tr class="table-description">
-                  <td>Длина палки</td>
-                  <td>Вес палки</td>
-                  <td>Материал</td>
-                </tr>
-              </table>
+              <div class="slider-content">
+                <p class="popular-goods-slogan">
+                  Делай селфи, как Бен Стиллер!
+                </p>
+                <p class="popular-goods-description">
+                  Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+                </p>
+                <a class="button" href="#">Подробнее</a>
+                <table class="popular-goods-features">
+                  <caption class="visually-hidden">Основные характеристики</caption>
+                  <tr class="table-data">
+                    <td>8,5 м</td>
+                    <td>5 кг</td>
+                    <td>Карбон</td>
+                  </tr>
+                  <tr class="table-description">
+                    <td>Длина палки</td>
+                    <td>Вес палки</td>
+                    <td>Материал</td>
+                  </tr>
+                </table>
+              </div>
             </li>
           </ul>
           <div class="slider-controls">
@@ -198,11 +206,17 @@
       <section class="terms">
         <h2 class="visually-hidden">Условия продажи.</h2>
         <div class="terms-container">
-          <div class="terms-button-container">
-            <button class="button" type="button">Доставка</button>
-            <button class="button" type="button">Гарантия</button>
-            <button class="button" type="button">Кредит</button>
-          </div>
+          <ul class="terms-button-container">
+            <li class="terms-button terms-button-active">
+              <button class="button" type="button">Доставка</button>
+            </li>
+            <li class="terms-button">
+              <button class="button" type="button">Гарантия</button>
+            </li>
+            <li class="terms-button">
+              <button class="button" type="button">Кредит</button>
+            </li>
+          </ul>
           <ul class="terms-list">
             <li class="terms-item">
               <h3 class="title terms-title">Доставка</h3>
@@ -223,10 +237,10 @@
               </p>
             </li>
           </ul>
+          <a class="delivery-info" href="#">
+            Доставим редкий товар под заказ
+          </a>
         </div>
-        <a class="delivery-info" href="#">
-          Доставим редкий товар под заказ
-        </a>
       </section>
       <section class="about">
         <h2 class="title">О нас</h2>
