@@ -9,22 +9,22 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="page-logo" href="#">
-          <img class="page-header-logo" src="images/logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
+          <img class="page-logo-image" src="images/logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
         </a>
-        <div class="navigation-menu-container">
+        <div class="navigation-container">
           <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="navigation-search">Поиск</label>
-            <input class="field navigation-search-field navigation-search-field-main" type="search" name="navigation-search" id="navigation-search" placeholder="Поиск по сайту">
+            <input class="field navigation-search-field" type="search" name="navigation-search" id="navigation-search" placeholder="Поиск по сайту">
             <button class="button-search" type="submit">Найти</button>
           </form>
           <ul class="navigation-list">
-            <li class="navigation-item">
+            <li class="navigation-item navigation-login">
               <a class="navigation-link" href="#">Войти</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-compare">
               <a class="navigation-link" href="#">Сравнить</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-cart">
               <a class="navigation-link" href="#">Корзина</a>
             </li>
           </ul>
@@ -32,38 +32,32 @@
         <ul class="navigation-catalog">
           <li class="navigation-catalog-item">
             <a class="navigation-catalog-link" href="#">Каталог товаров</a>
-            <ul class="subcatalog">
-              <li class="subcatalog-item">
-                <ul class="subcatalog-list">
-                  <li class="subcatalog-item-inner">
-                    <a class="subcatalog-link" href="#">Виртуальная реальность</a>
-                  </li>
-                  <li class="subcatalog-item-inner">
-                    <a class="subcatalog-link" href="catalog.html">Моноподы для селфи</a>
-                  </li>
-                  <li class="subcatalog-item-inner">
-                    <a class="subcatalog-link" href="#">Экшн-камеры</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="subcatalog-item">
-                <ul class="subcatalog-list">
-                  <li class="subcatalog-item-inner">
-                    <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
-                  </li>
-                  <li class="subcatalog-item-inner">
-                    <a class="subcatalog-link" href="#">Умные часы</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="subcatalog-item">
-                <ul class="subcatalog-list">
-                  <li class="subcatalog-item-inner">
-                    <a class="subcatalog-link" href="#">Квадрокоптеры</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <div class="subcatalog">
+              <ul class="subcatalog-list">
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="subcatalog-list">
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="subcatalog-list">
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="navigation-catalog-item">
             <a class="navigation-catalog-link" href="#">Доставка</a>
@@ -84,7 +78,7 @@
         <div class="slider">
           <ul class="slider-list">
             <li class="slider-item">
-              <img class="slider-image" src="images/slider/slider-1.png" alt="Фото товара." width="560" height="560">
+              <img class="slider-image" src="images/slider/slider-1.png" alt="Квадрокоптер." width="560" height="560">
               <div class="slider-content">
                 <p class="popular-goods-slogan">
                   Порхает как бабочка, жалит как пчела!
@@ -107,7 +101,7 @@
               </div>
             </li>
             <li class="slider-item">
-              <img class="slider-image" src="images/slider/slider-2.png" alt="Фото товара." width="560" height="560">
+              <img class="slider-image" src="images/slider/slider-2.png" alt="Фитнес-браслет." width="560" height="560">
               <div class="slider-content">
                 <p class="popular-goods-slogan">
                   Худеем правильно!
@@ -128,7 +122,7 @@
               </div>
             </li>
             <li class="slider-item">
-              <img class="slider-image" src="images/slider/slider-3.png" alt="Фото товара." width="560" height="560">
+              <img class="slider-image" src="images/slider/slider-3.png" alt="Селфи-палка." width="560" height="560">
               <div class="slider-content">
                 <p class="popular-goods-slogan">
                   Делай селфи, как Бен Стиллер!
@@ -153,29 +147,27 @@
               </div>
             </li>
           </ul>
-          <div class="slider-controls">
-            <button class="slider-button slider-next" type="button">
-              <span class="visually-hidden">Предыдущий товар</span>
-            </button>
-            <button class="slider-button slider-prev" type="button">
-              <span class="visually-hidden">Следующий товар</span>
-            </button>
-          </div>
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Предыдущий товар.</span>
+          </button>
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Следующий товар.</span>
+          </button>
         </div>
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
-            <button class="slider-pagination-button slider-pagination-button-current" type="button">
-              <span class="visually-hidden">1 фото</span>
+            <button class="slider-pagination slider-pagination-current" type="button">
+              <span class="visually-hidden">Первый товар.</span>
             </button>
           </li>
           <li class="slider-pagination-item">
             <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">2 фото</span>
+              <span class="visually-hidden">Второй товар.</span>
             </button>
           </li>
           <li class="slider-pagination-item">
             <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">3 фото</span>
+              <span class="visually-hidden">Третий товар.</span>
             </button>
           </li>
         </ol>
@@ -299,7 +291,7 @@
     </main>
     <footer class="page-footer">
       <a class="page-logo" href="#">
-        <img class="page-header-logo" src="images/logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
+        <img class="page-header-logo" src="images/logo-orange.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
       </a>
       <address class="footer-address">
         Санкт-Петербург, набережная реки Карповки, 5, литера П.
@@ -308,17 +300,17 @@
         <h2 class="visually-hidden">Навигация.</h2>
         <ul class="footer-navigation-list">
           <li class="footer-navigation-item">
-            <a class="footer-navigation-link">
+            <a class="footer-navigation-link" href="#">
               Доставка
             </a>
           </li>
           <li class="footer-navigation-item">
-            <a class="footer-navigation-link">
+            <a class="footer-navigation-link" href="#">
               Гарантия
             </a>
           </li>
           <li class="footer-navigation-item">
-            <a class="footer-navigation-link">
+            <a class="footer-navigation-link" href="#">
               Контакты
             </a>
           </li>
