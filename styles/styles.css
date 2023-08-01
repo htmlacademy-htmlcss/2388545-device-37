@@ -279,6 +279,11 @@ body {
   text-align: center;
 }
 
+.tooltip {
+  position: absolute;
+  display: none;
+}
+
 .navigation-link {
   display: flex;
   gap: 12px;
