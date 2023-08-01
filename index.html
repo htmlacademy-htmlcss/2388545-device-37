@@ -14,7 +14,7 @@
         <div class="navigation-container">
           <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="navigation-search">Поиск</label>
-            <input class="field navigation-search-field" type="search" name="navigation-search" id="navigation-search" placeholder="Поиск по сайту">
+            <input class="field navigation-search-field" type="search" name="navigation-search" id="navigation-search" placeholder="Поиск по сайту" required>
             <button class="button-search" type="submit">Найти</button>
           </form>
           <ul class="navigation-list">
@@ -30,7 +30,7 @@
           </ul>
         </div>
         <ul class="navigation-catalog">
-          <li class="navigation-catalog-item">
+          <li class="navigation-catalog-item with-subcatalog">
             <a class="navigation-catalog-link" href="#">Каталог товаров</a>
             <div class="subcatalog">
               <ul class="subcatalog-list">
@@ -66,7 +66,7 @@
             <a class="navigation-catalog-link" href="#">Гарантия</a>
           </li>
           <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link" href="#">Контакты</a>
+            <a class="navigation-catalog-link navigation-current" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
