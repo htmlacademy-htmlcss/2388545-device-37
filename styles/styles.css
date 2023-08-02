@@ -55,7 +55,7 @@ body {
 
 .button {
   display: inline-block;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-size: inherit;
   line-height: 21px;
   letter-spacing: 3.6px;
@@ -137,6 +137,7 @@ body {
 }
 
 .navigation-search-field {
+  position: relative;
   box-sizing: border-box;
   width: 359px;
   margin: 0;
@@ -147,13 +148,23 @@ body {
   background-color: #ffe17f;
   border-radius: 50px 0 0 50px;
   border: 2px solid #000000;
-  background-image: url(../images/navigation/search.svg);
+  background-image: url("../images/navigation/search.svg");
   background-repeat: no-repeat;
   background-position: left 15px center;
 }
 
-.navigation-search-field:focus {
+.navigation-search-label {
+  position: absolute;
+  width: 361px;
+  height: 44px;
+  top: 84px;
+  left: 59px;
   outline: 2px solid #af4fff;
+  display: none;
+}
+
+.navigation-search-field:focus + .navigation-search-label {
+  display: block;
 }
 
 .navigation-search-field:disabled {
@@ -166,6 +177,7 @@ body {
 }
 
 .button-search {
+  position: relative;
   box-sizing: border-box;
   min-width: 158px;
   margin: 0;
@@ -180,8 +192,19 @@ body {
   cursor: pointer;
 }
 
-.button-search:focus {
+.button-search::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  left: -4px;
+  top: -4px;
   outline: 2px solid #af4fff;
+  display: none;
+}
+
+.button-search:focus::after {
+  display: block;
 }
 
 .button-search:hover {
@@ -240,7 +263,7 @@ body {
 
 .navigation-login .navigation-link::before {
   content: "";
-  background-image: url(../images/navigation/login.svg);
+  background-image: url("../images/navigation/login.svg");
   background-repeat: no-repeat;
   background-position: left;
   width: 15px;
@@ -249,7 +272,7 @@ body {
 
 .navigation-compare .navigation-link::before {
   content: "";
-  background-image: url(../images/navigation/compare.svg);
+  background-image: url("../images/navigation/compare.svg");
   background-repeat: no-repeat;
   background-position: left;
   width: 10px;
@@ -257,7 +280,7 @@ body {
 
 .navigation-cart .navigation-link::before {
   content: "";
-  background-image: url(../images/navigation/cart.svg);
+  background-image: url("../images/navigation/cart.svg");
   background-repeat: no-repeat;
   background-position: left bottom 10px;
   width: 16px;
@@ -279,9 +302,126 @@ body {
   text-align: center;
 }
 
-.tooltip {
+.popover {
   position: absolute;
+  box-sizing: border-box;
+  top: 37px;
+  left: 34px;
+  transform: translateX(-50%);
+  width: 320px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  z-index: 1;
   display: none;
+}
+
+.navigation-cart .navigation-link:hover + .popover {
+  display: block;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.cart-good {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.cart-image {
+  object-fit: contain;
+}
+
+.cart-position {
+  padding: 0;
+  margin: 0;
+}
+
+.cart-del {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: #000000;
+  flex-shrink: 0;
+}
+
+.cart-del::before,
+.cart-del::after {
+  position: absolute;
+  top: 5px;
+  left: -1px;
+  content: "";
+  width: 12px;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.cart-del::before {
+  transform: rotate(45deg);
+}
+
+.cart-del::after {
+  transform: rotate(-45deg);
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 20px;
+  background-color: #1a1a1a;
+}
+
+.good-counter,
+.sum-counter {
+  margin: 0;
+}
+
+.cart-open-button {
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  margin: 20px;
+  padding: 14px;
+  width: 280px;
+  line-height: 21px;
+  letter-spacing: 3.6px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #ffffff;
+}
+
+.popover::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  width: 14px;
+  height: 6px;
+  background-image: url("../images/navigation/tooltip-corner.svg");
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navigation-link {
@@ -311,6 +451,7 @@ body {
   position: relative;
   margin-right: auto;
   padding-right: 68px;
+  max-width: 450px;
 }
 
 .with-subcatalog .navigation-catalog-link::after {
@@ -327,13 +468,33 @@ body {
   opacity: 0.3;
 }
 
-.with-subcatalog:hover .navigation-catalog-link::after {
+.with-subcatalog .navigation-catalog-link:hover::after {
   opacity: 1;
 }
 
-.with-subcatalog:active .navigation-catalog-link::after,
-.with-subcatalog:focus-within .navigation-catalog-link::after {
-  content: url(../images/navigation/minus.svg);
+.with-subcatalog .navigation-catalog-link:active::after,
+.with-subcatalog .navigation-catalog-link:focus-within::after {
+  content: url("../images/navigation/minus.svg");
+  opacity: 0.3;
+}
+
+.with-subcatalog .navigation-catalog-link::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -2px;
+  width: calc(100% + 71px);
+  height: calc(100% + 26px);
+  outline: 2px solid #af4fff;
+  display: none;
+}
+
+.with-subcatalog .navigation-catalog-link:focus::before {
+  display: block;
+}
+
+.navigation-catalog-link:focus-within:hover::after,
+.navigation-catalog-link:focus-within:active::after {
   opacity: 1;
 }
 
@@ -346,7 +507,7 @@ body {
   position: relative;
   display: inline-block;
   height: 100%;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   line-height: 21px;
   letter-spacing: 3.6px;
   color: #000000;
@@ -413,7 +574,7 @@ body {
 .title,
 .popular-goods-slogan {
   margin: 0;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
@@ -471,7 +632,7 @@ body {
 }
 
 .goods-categories-link {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   line-height: 24px;
   letter-spacing: -0.36px;
   color: #000000;
@@ -514,7 +675,7 @@ body {
 }
 
 .delivery-info {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 4px;
@@ -588,7 +749,7 @@ body {
 
 .filter-title,
 .button-more {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 3.2px;

@@ -13,8 +13,8 @@
         </a>
         <div class="navigation-container">
           <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="navigation-search">Поиск</label>
-            <input class="field navigation-search-field" type="search" name="navigation-search" id="navigation-search" placeholder="Поиск по сайту" required>
+            <input class="field navigation-search-field" type="search" aria-label="Поле поиска по сайту" name="navigation-search" id="navigation-search" placeholder="Поиск по сайту" required>
+            <label class="navigation-search-label" for="navigation-search"></label>
             <button class="button-search" type="submit">Найти</button>
           </form>
           <ul class="navigation-list">
@@ -26,13 +26,13 @@
             </li>
             <li class="navigation-item navigation-cart">
               <a class="navigation-link" href="#">Корзина</a>
-              <div class="tooltip">
+              <div class="popover">
                 <ul class="cart-list">
                   <li class="cart-item">
                     <a class="cart-good" href="">
                       <img class="cart-image" src="images/navigation/product-1-small.jpg" width="39px" height="43px" alt="Любительская селфи-палка.">
                       <p class="cart-position">
-                        Любительская селфи-палка
+                        Любительская селфи&#8288;-&#8288;палка
                       </p>
                     </a>
                     <button class="cart-del" type="button">
@@ -43,7 +43,7 @@
                     <a class="cart-good" href="">
                       <img class="cart-image" src="images/navigation/product-2-small.jpg" width="39px" height="43px" alt="Профессиональная селфи-палка.">
                       <p class="cart-position">
-                        Профессиональная селфи-палка
+                        Профессиональная селфи&#8288;-&#8288;палка
                       </p>
                     </a>
                     <button class="cart-del" type="button">
@@ -51,15 +51,17 @@
                     </button>
                   </li>
                 </ul>
-                <p class="counter good-counter">
-                  <span>Товаров:</span>
-                  <span>2</span>
-                </p>
-                <p class="counter sum-counter">
-                  <span>Сумма:</span>
-                  <span>2000</span>
-                  <span>₽</span>
-                </p>
+                <div class="counter">
+                  <p class="good-counter">
+                    <span>Товаров:</span>
+                    <span>2</span>
+                  </p>
+                  <p class="sum-counter">
+                    <span>Сумма:</span>
+                    <span>2000</span>
+                    <span>₽</span>
+                  </p>
+                </div>
                 <a class="cart-open-button" href="">
                   Открыть корзину
                 </a>
