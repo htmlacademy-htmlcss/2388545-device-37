@@ -116,8 +116,14 @@
       <section class="popular-goods">
         <h2 class="visually-hidden">Популярные товары</h2>
         <div class="slider">
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущий товар.</span>
+          </button>
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующий товар.</span>
+          </button>
           <ul class="slider-list">
-            <li class="slider-item">
+            <li class="slider-item slider-current">
               <img class="slider-image" src="images/slider/slider-1.png" alt="Квадрокоптер." width="560" height="560">
               <div class="slider-content">
                 <p class="popular-goods-slogan">
@@ -127,17 +133,16 @@
                   Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
                 </p>
                 <a class="button" href="#">Подробнее</a>
-                <table class="popular-goods-features">
-                  <caption class="visually-hidden">Основные характеристики</caption>
-                  <tr class="table-data">
-                    <td>800 м</td>
-                    <td>50 м</td>
-                  </tr>
-                  <tr class="table-description">
-                    <td>Дальность полета</td>
-                    <td>Радиус поражения</td>
-                  </tr>
-                </table>
+                <div class="features-container">
+                  <dl class="popular-goods-features">
+                    <dt class="features-term">Дальность полета</dt>
+                    <dd class="features-description">800 м</dd>
+                  </dl>
+                  <dl class="popular-goods-features">
+                    <dt class="features-term">Радиус поражения</dt>
+                    <dd class="features-description">50 м</dd>
+                  </dl>
+                </div>
               </div>
             </li>
             <li class="slider-item">
@@ -150,15 +155,12 @@
                   Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
                 </p>
                 <a class="button" href="#">Подробнее</a>
-                <table class="popular-goods-features">
-                  <caption class="visually-hidden">Основные характеристики</caption>
-                  <tr>
-                    <td class="table-data">48 часов</td>
-                  </tr>
-                  <tr>
-                    <td class="table-description">Без подзарядки</td>
-                  </tr>
-                </table>
+                <div class="features-container">
+                  <dl class="popular-goods-features">
+                    <dt class="features-term">Без подзарядки</dt>
+                    <dd class="features-description">48 часов</dd>
+                  </dl>
+                </div>
               </div>
             </li>
             <li class="slider-item">
@@ -171,32 +173,27 @@
                   Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
                 </p>
                 <a class="button" href="#">Подробнее</a>
-                <table class="popular-goods-features">
-                  <caption class="visually-hidden">Основные характеристики</caption>
-                  <tr class="table-data">
-                    <td>8,5 м</td>
-                    <td>5 кг</td>
-                    <td>Карбон</td>
-                  </tr>
-                  <tr class="table-description">
-                    <td>Длина палки</td>
-                    <td>Вес палки</td>
-                    <td>Материал</td>
-                  </tr>
-                </table>
+                <div class="features-container">
+                  <dl class="popular-goods-features">
+                    <dt class="features-term">Длина палки</dt>
+                    <dd class="features-description">8,5 м</dd>
+                  </dl>
+                  <dl class="popular-goods-features">
+                    <dt class="features-term">Вес палки</dt>
+                    <dd class="features-description">5 кг</dd>
+                  </dl>
+                  <dl class="popular-goods-features">
+                    <dt class="features-term">Материал</dt>
+                    <dd class="features-description">Карбон</dd>
+                  </dl>
+                </div>
               </div>
             </li>
           </ul>
-          <button class="slider-button slider-next" type="button">
-            <span class="visually-hidden">Предыдущий товар.</span>
-          </button>
-          <button class="slider-button slider-prev" type="button">
-            <span class="visually-hidden">Следующий товар.</span>
-          </button>
         </div>
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
-            <button class="slider-pagination slider-pagination-current" type="button">
+            <button class="slider-pagination-button slider-pagination-current" type="button">
               <span class="visually-hidden">Первый товар.</span>
             </button>
           </li>
