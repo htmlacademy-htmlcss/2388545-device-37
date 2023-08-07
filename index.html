@@ -17,15 +17,18 @@
             <label class="navigation-search-label" for="navigation-search"></label>
             <button class="button-search" type="submit">Найти</button>
           </form>
+          <div class="navigation-item navigation-login">
+            <a class="navigation-link" href="#">Войти</a>
+          </div>
           <ul class="navigation-list">
-            <li class="navigation-item navigation-login">
-              <a class="navigation-link" href="#">Войти</a>
-            </li>
             <li class="navigation-item navigation-compare">
               <a class="navigation-link" href="#">Сравнить</a>
             </li>
             <li class="navigation-item navigation-cart">
-              <a class="navigation-link" href="#">Корзина</a>
+              <a class="navigation-link" href="#">
+                <span class="favorite-counter">2</span>
+                Корзина
+              </a>
               <div class="popover">
                 <ul class="cart-list">
                   <li class="cart-item">
@@ -69,8 +72,8 @@
             </li>
           </ul>
         </div>
-        <ul class="navigation-catalog">
-          <li class="navigation-catalog-item with-subcatalog">
+        <div class="navigation-catalog">
+          <div class="navigation-catalog-item with-subcatalog">
             <a class="navigation-catalog-link" href="#">Каталог товаров</a>
             <div class="subcatalog">
               <ul class="subcatalog-list">
@@ -98,17 +101,19 @@
                 </li>
               </ul>
             </div>
-          </li>
-          <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link navigation-current" href="#">Контакты</a>
-          </li>
-        </ul>
+          </div>
+          <ul class="navigation-catalog-list">
+            <li class="navigation-catalog-item">
+              <a class="navigation-catalog-link" href="#">Доставка</a>
+            </li>
+            <li class="navigation-catalog-item">
+              <a class="navigation-catalog-link" href="#">Гарантия</a>
+            </li>
+            <li class="navigation-catalog-item">
+              <a class="navigation-catalog-link navigation-current" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="main-container">
@@ -122,7 +127,7 @@
           <button class="slider-button slider-next" type="button">
             <span class="visually-hidden">Следующий товар.</span>
           </button>
-          <ul class="slider-list">
+          <ol class="slider-list">
             <li class="slider-item slider-current">
               <img class="slider-image" src="images/slider/slider-1.png" alt="Квадрокоптер." width="560" height="560">
               <div class="slider-content">
@@ -189,7 +194,7 @@
                 </div>
               </div>
             </li>
-          </ul>
+          </ol>
         </div>
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
@@ -212,22 +217,22 @@
       <section class="goods-categories">
         <h2 class="visually-hidden">Категории товаров.</h2>
         <ul class="goods-categories-list">
-          <li class="goods-categories-item">
+          <li class="goods-categories-item goods-categories-reality">
             <a class="goods-categories-link" href="#">Виртуальная реальность</a>
           </li>
-          <li class="goods-categories-item">
-            <a class="goods-categories-link" href="catalog.html">Моноподы для селфи</a>
+          <li class="goods-categories-item goods-categories-selfie">
+            <a class="goods-categories-link" href="catalog.html">Моноподы для&nbsp;селфи</a>
           </li>
-          <li class="goods-categories-item">
+          <li class="goods-categories-item goods-categories-camera">
             <a class="goods-categories-link" href="#">Экшн-камеры</a>
           </li>
-          <li class="goods-categories-item">
+          <li class="goods-categories-item goods-categories-fitness">
             <a class="goods-categories-link" href="#">Фитнес-браслеты</a>
           </li>
-          <li class="goods-categories-item">
+          <li class="goods-categories-item goods-categories-watch">
             <a class="goods-categories-link" href="#">Умные часы</a>
           </li>
-          <li class="goods-categories-item">
+          <li class="goods-categories-item goods-categories-quadrocopter">
             <a class="goods-categories-link" href="#">Квадрокоптеры</a>
           </li>
         </ul>
@@ -235,80 +240,85 @@
       <section class="terms">
         <h2 class="visually-hidden">Условия продажи.</h2>
         <div class="terms-container">
-          <ul class="terms-button-container">
-            <li class="terms-button terms-button-active">
-              <button class="button" type="button">Доставка</button>
-            </li>
-            <li class="terms-button">
-              <button class="button" type="button">Гарантия</button>
-            </li>
-            <li class="terms-button">
-              <button class="button" type="button">Кредит</button>
-            </li>
-          </ul>
-          <ul class="terms-list">
-            <li class="terms-item">
-              <h3 class="title terms-title">Доставка</h3>
-              <p class="terms-description">
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-              </p>
-            </li>
-            <li class="terms-item">
-              <h3 class="title terms-title">Гарантия</h3>
-              <p class="terms-description">
-                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-              </p>
-            </li>
-            <li class="terms-item">
-              <h3 class="title terms-title">Кредит</h3>
-              <p class="terms-description">
-                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
-              </p>
-            </li>
-          </ul>
-          <a class="delivery-info" href="#">
-            Доставим редкий товар под заказ
-          </a>
+          <div class="terms-slider">
+            <div class="terms-button-container">
+              <li class="terms-button terms-button-active">
+                <button class="button" type="button">Доставка</button>
+              </li>
+              <li class="terms-button">
+                <button class="button" type="button">Гарантия</button>
+              </li>
+              <li class="terms-button">
+                <button class="button" type="button">Кредит</button>
+              </li>
+            </div>
+            <ul class="terms-list">
+              <li class="terms-item terms-item-delivery terms-item-current">
+                <h3 class="title terms-title">Доставка</h3>
+                <p class="terms-description">
+                  Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на ваш этаж.
+                </p>
+              </li>
+              <li class="terms-item terms-item-guarantee">
+                <h3 class="title terms-title">Гарантия</h3>
+                <p class="terms-description">
+                  Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+                </p>
+              </li>
+              <li class="terms-item terms-item-credit">
+                <h3 class="title terms-title">Кредит</h3>
+                <p class="terms-description">
+                  Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
+        <a class="delivery-info" href="#">
+          Доставим редкий товар под заказ
+          <svg class="info-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40"><g clip-path="url(#a)"><path d="M21 14h-2v2h2v-2ZM21 18h-2v8h2v-8Z"/></g><defs><clipPath id="a"><path d="M19 14h2v12h-2z"/></clipPath></defs></svg>
+        </a>
       </section>
-      <section class="about">
-        <h2 class="title">О нас</h2>
-        <p>
-          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
-        </p>
-        <p>
-          Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
-        </p>
-        <ul class="delivery-companies-list">
-          <li class="delivery-companies-item">
-            <a class="delivery-companies-link">Меловые линии</a>
-          </li>
-          <li class="delivery-companies-item">
-            <a class="delivery-companies-link">СДИК</a>
-          </li>
-          <li class="delivery-companies-item">
-            <a class="delivery-companies-link">ТоксБерри</a>
-          </li>
-        </ul>
-        <a class="button" href="#">Подробнее о нас</a>
-      </section>
-      <section class="contacts">
-        <h2 class="contacts-title">Контакты</h2>
-        <p>
-          Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.
-        </p>
-        <h3 class="subtitle contacts-subtitle">Интернет-магазин «Девайс»</h3>
-        <address class="contacts-address">
-          <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        </address>
-        <h3 class="subtitle contacts-subtitle">Время работы</h3>
-        <ul class="contacts-schedule">
-          <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
-          <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
-        </ul>
-        <a class="button" href="#">Напишите нам</a>
-      </section>
+      <div class="info-container">
+        <section class="about">
+          <h2 class="title">О нас</h2>
+          <p>
+            Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+          </p>
+          <p>
+            Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
+          </p>
+          <ul class="delivery-companies-list">
+            <li class="delivery-companies-item">
+              <a class="delivery-companies-link">Меловые линии</a>
+            </li>
+            <li class="delivery-companies-item">
+              <a class="delivery-companies-link">СДИК</a>
+            </li>
+            <li class="delivery-companies-item">
+              <a class="delivery-companies-link">ТоксБерри</a>
+            </li>
+          </ul>
+          <a class="button" href="#">Подробнее о нас</a>
+        </section>
+        <section class="contacts">
+          <h2 class="title contacts-title">Контакты</h2>
+          <p>
+            Вы можете забрать товар сами, заехав в наш офис. Заодно&nbsp;сможете проверить работоспособность покупки.
+          </p>
+          <h3 class="subtitle contacts-subtitle">Интернет-магазин «Девайс»</h3>
+          <address class="contacts-address">
+            <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+            <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </address>
+          <h3 class="subtitle contacts-subtitle">Время работы</h3>
+          <ul class="contacts-schedule">
+            <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
+            <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
+          </ul>
+          <a class="button" href="#">Напишите нам</a>
+        </section>
+      </div>
       <section class="subscribe">
         <h2 class="title subscribe-title">Подпишитесь на рассылку</h2>
         <p>

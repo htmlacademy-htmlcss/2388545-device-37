@@ -17,11 +17,11 @@
             <input class="field navigation-search-field" type="search" name="navigation-search" id="navigation-search" value="Текст поиска" required>
             <button class="button-search" type="submit">Найти</button>
           </form>
+          <div class="navigation-item navigation-login log-in">
+            <a class="navigation-link user" href="#">Коля Петухов</a>
+            <a class="navigation-link-out" href="#">Выйти</a>
+          </div>
           <ul class="navigation-list">
-            <li class="navigation-item navigation-login log-in">
-              <a class="navigation-link user" href="#">Коля Петухов</a>
-              <a class="navigation-link-out" href="#">Выйти</a>
-            </li>
             <li class="navigation-item navigation-compare">
               <a class="navigation-link" href="#">Сравнить</a>
             </li>
@@ -70,8 +70,8 @@
             </li>
           </ul>
         </div>
-        <ul class="navigation-catalog">
-          <li class="navigation-catalog-item with-subcatalog">
+        <div class="navigation-catalog">
+          <div class="navigation-catalog-item with-subcatalog">
             <a class="navigation-catalog-link" href="#">Каталог товаров</a>
             <div class="subcatalog">
               <ul class="subcatalog-list">
@@ -99,17 +99,19 @@
                 </li>
               </ul>
             </div>
-          </li>
-          <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link" href="#">Контакты</a>
-          </li>
-        </ul>
+          </div>
+          <ul class="navigation-catalog-list">
+            <li class="navigation-catalog-item">
+              <a class="navigation-catalog-link" href="#">Доставка</a>
+            </li>
+            <li class="navigation-catalog-item">
+              <a class="navigation-catalog-link" href="#">Гарантия</a>
+            </li>
+            <li class="navigation-catalog-item">
+              <a class="navigation-catalog-link navigation-current" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="main-container">
