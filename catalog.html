@@ -13,8 +13,8 @@
         </a>
         <div class="navigation-container">
           <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="navigation-search">Поиск</label>
             <input class="field navigation-search-field" type="search" name="navigation-search" id="navigation-search" value="Текст поиска" required>
+            <label class="navigation-search-label" for="navigation-search"></label>
             <button class="button-search" type="submit">Найти</button>
           </form>
           <div class="navigation-item navigation-login log-in">
@@ -26,7 +26,10 @@
               <a class="navigation-link" href="#">Сравнить</a>
             </li>
             <li class="navigation-item navigation-cart">
-              <a class="navigation-link" href="#">Корзина</a>
+              <a class="navigation-link" href="#">
+                <span class="favorite-counter">2</span>
+                Корзина
+              </a>
               <div class="popover">
                 <ul class="cart-list">
                   <li class="cart-item">
