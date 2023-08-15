@@ -110,7 +110,7 @@
               <a class="navigation-catalog-link" href="#">Гарантия</a>
             </li>
             <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link navigation-current" href="#">Контакты</a>
+              <a class="navigation-catalog-link" href="#">Контакты</a>
             </li>
           </ul>
         </div>
@@ -425,7 +425,8 @@
               <button class="button-counter button-counter-del" type="button">
                 <span class="visually-hidden">Уменьшить количество.</span>
               </button>
-              <input class="delivery-field" type="number" id="count" name="count" value="1">
+              <input class="delivery-field" type="number" id="count" name="count" value="1" min="1">
+              <span class="invalid-outline"></span>
               <button class="button-counter button-counter-add" type="button">
                 <span class="visually-hidden">Увеличить количество.</span>
               </button>
