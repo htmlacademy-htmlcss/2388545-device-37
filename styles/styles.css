@@ -753,12 +753,17 @@ body {
   padding: 0;
   list-style-type: none;
   z-index: 1;
+  transform: translateX(-1260px);
+  transition: transform 1s;
 }
 
 .slider-item {
+  position: relative;
+  display: flex;
   width: 1160px;
-  display: none;
+  /* display: none; */
   gap: 40px;
+  flex-shrink: 0;
 }
 
 .slider-item::before {
@@ -780,10 +785,6 @@ body {
 
 .slider-item:nth-child(3)::before {
   content: "03";
-}
-
-.slider-current {
-  display: flex;
 }
 
 .slider-image {
