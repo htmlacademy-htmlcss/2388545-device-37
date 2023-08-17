@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
   <body>
     <header class="page-header">
@@ -34,7 +36,7 @@
                 <ul class="cart-list">
                   <li class="cart-item">
                     <a class="cart-good" href="">
-                      <img class="cart-image" src="images/navigation/product-1-small.jpg" width="39px" height="43px" alt="Любительская селфи-палка.">
+                      <img class="cart-image" src="images/navigation/product-1-small.jpg" width="39" height="43" alt="Любительская селфи-палка.">
                       <p class="cart-position">
                         Любительская селфи&#8288;-&#8288;палка
                       </p>
@@ -45,7 +47,7 @@
                   </li>
                   <li class="cart-item">
                     <a class="cart-good" href="">
-                      <img class="cart-image" src="images/navigation/product-2-small.jpg" width="39px" height="43px" alt="Профессиональная селфи-палка.">
+                      <img class="cart-image" src="images/navigation/product-2-small.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
                       <p class="cart-position">
                         Профессиональная селфи&#8288;-&#8288;палка
                       </p>
@@ -137,7 +139,7 @@
           <section class="filter">
             <h2 class=" catalog-products-title filter-title">фильтр:</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
-              <div class="filter-group">
+              <fieldset class="filter-group">
                 <legend class="filter-subtitle">Стоимость</legend>
                 <div class="range">
                   <div class="range-scale">
@@ -159,8 +161,8 @@
                     </label>
                   </div>
                 </div>
-              </div>
-              <div class="filter-group filter-group-checkbox">
+              </fieldset>
+              <fieldset class="filter-group filter-group-checkbox">
                 <legend class="filter-subtitle">Цвет</legend>
                 <ul class="filter-list">
                   <li class="filter-item">
@@ -194,8 +196,8 @@
                     </label>
                   </li>
                 </ul>
-              </div>
-              <div class="filter-group filter-group-radio">
+              </fieldset>
+              <fieldset class="filter-group filter-group-radio">
                 <legend class="filter-subtitle">Bluetooth</legend>
                 <ul class="filter-list">
                   <li class="filter-item">
@@ -211,7 +213,7 @@
                     </label>
                   </li>
                 </ul>
-              </div>
+              </fieldset>
               <button class="button" type="submit">Показать</button>
             </form>
           </section>
@@ -282,6 +284,7 @@
               <a class="button-more" href="#">Загрузить ещё</a>
             </section>
             <section class="pagination">
+              <h2 class="visually-hidden">Пагинация.</h2>
               <a class="button button-pagination button-pagination-disabled">Назад</a>
               <ul class="pagination-list">
                 <li class="pagination-item">
@@ -308,7 +311,7 @@
     </main>
     <footer class="page-footer">
       <div class="footer-container">
-        <a class="page-footer-logo" href="#">
+        <a class="page-footer-logo" href="index.html">
           <img class="footer-logo" src="images/logo-orange.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
         </a>
         <address class="footer-address">

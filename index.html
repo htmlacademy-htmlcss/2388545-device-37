@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
   <body>
     <header class="page-header">
@@ -33,7 +35,7 @@
                 <ul class="cart-list">
                   <li class="cart-item">
                     <a class="cart-good" href="">
-                      <img class="cart-image" src="images/navigation/product-1-small.jpg" width="39px" height="43px" alt="Любительская селфи-палка.">
+                      <img class="cart-image" src="images/navigation/product-1-small.jpg" width="39" height="43" alt="Любительская селфи-палка.">
                       <p class="cart-position">
                         Любительская селфи&#8288;-&#8288;палка
                       </p>
@@ -44,7 +46,7 @@
                   </li>
                   <li class="cart-item">
                     <a class="cart-good" href="">
-                      <img class="cart-image" src="images/navigation/product-2-small.jpg" width="39px" height="43px" alt="Профессиональная селфи-палка.">
+                      <img class="cart-image" src="images/navigation/product-2-small.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
                       <p class="cart-position">
                         Профессиональная селфи&#8288;-&#8288;палка
                       </p>
@@ -241,7 +243,7 @@
         <h2 class="visually-hidden">Условия продажи.</h2>
         <div class="terms-container">
           <div class="terms-slider">
-            <div class="terms-button-container">
+            <ul class="terms-button-container">
               <li class="terms-button terms-button-active">
                 <button class="button" type="button">Доставка</button>
               </li>
@@ -251,7 +253,7 @@
               <li class="terms-button">
                 <button class="button" type="button">Кредит</button>
               </li>
-            </div>
+            </ul>
             <ul class="terms-list">
               <li class="terms-item terms-item-delivery terms-item-current">
                 <h3 class="title terms-title">Доставка</h3>
@@ -274,9 +276,11 @@
             </ul>
           </div>
         </div>
-        <a class="delivery-info" href="#">
-          Доставим редкий товар под заказ
-        </a>
+        <div class="delivery-info">
+          <a class="delivery-info-link" href="#">
+            Доставим редкий товар под заказ
+          </a>
+        </div>
       </section>
       <div class="info-container">
         <section class="about">
@@ -436,5 +440,6 @@
         </form>
       </div>
     </div>
+    <script src="./script/script.js"></script>
   </body>
 </html>
