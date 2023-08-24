@@ -743,17 +743,16 @@ body {
 
 .slider {
   position: relative;
+  overflow: hidden;
 }
 
 .slider-list {
   display: flex;
-  gap: 100px;
   position: relative;
   margin: 0;
   padding: 0;
   list-style-type: none;
   z-index: 1;
-  transform: translateX(-1260px);
   transition: transform 1s;
 }
 
@@ -761,7 +760,6 @@ body {
   position: relative;
   display: flex;
   width: 1160px;
-  /* display: none; */
   gap: 40px;
   flex-shrink: 0;
 }
